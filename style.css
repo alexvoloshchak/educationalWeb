@@ -1,0 +1,323 @@
+/* vseobecny reset a box-sizing */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* telo stranky */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #ffffff;
+    /* biele pozadie */
+    color: #111827;
+    /* tmavosivý text */
+    line-height: 1.6;
+}
+
+/* spolocna sirka pre hlavne bloky */
+header,
+nav,
+main,
+footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/*  hlavicka */
+
+header {
+    background-color: #3257b4;
+    color: #ffffff;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+/* logo + nazov stranky */
+header .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+header .logo-link img {
+    display: block;
+    height: 60px;
+    width: auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/*  navigacia(menu) */
+
+nav {
+    background-color: #3257b4;
+    padding: 0.3rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.4rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: inline-block;
+    background-color: #1e3a8a;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+/* aktivna polozka menu – class="active" v HTML */
+nav a.active {
+    background-color: #ffffff;
+    color: #0b3c91;
+}
+
+/* efekt pri prechode mysou */
+nav a:hover {
+    background-color: #3b82f6;
+    transform: scale(1.05);
+}
+
+/* odkazy mimo navigacie (main, aside, footer) */
+main a,
+aside a,
+footer a {
+    color: #1565c0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+main a:hover,
+aside a:hover,
+footer a:hover {
+    text-decoration: underline;
+}
+
+/*  hlavny obsah */
+
+main {
+    margin: 1.5rem auto 2rem;
+}
+
+/* biely obsahovy blok v strede */
+article {
+    background-color: #ffffff;
+    padding: 1.6rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* nadpisy v clanku */
+article h1,
+article h2,
+article h3 {
+    color: #1e3a8a;
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+}
+
+/* bezny text v clanku */
+article p {
+    margin-bottom: 0.8rem;
+}
+
+/* dlhy citat – blockquote */
+article blockquote {
+    border-left: 4px solid #1e3a8a;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    background-color: #f3f4ff;
+}
+
+/* kratky citat – q */
+article q {
+    font-style: italic;
+    color: #1e3a8a;
+}
+
+/* zvyraznenie – mark */
+article mark {
+    background-color: #fffbcc;
+    padding: 0 0.2rem;
+}
+
+/*  zoznamy (UL, OL, DL) */
+
+ul,
+ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.3rem;
+}
+
+/* definicny zoznam */
+dl {
+    margin: 1rem 0;
+}
+
+dt {
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+dd {
+    margin: 0 0 0.5rem 1rem;
+}
+
+/*  aside - bocny blok */
+
+aside {
+    margin-top: 1.5rem;
+    padding: 1rem 1.2rem;
+    background-color: #e8f2ff;
+    border: 1px solid #0055aa;
+    border-radius: 6px;
+}
+
+aside h3 {
+    margin-top: 0;
+    color: #003b80;
+}
+
+/*  paticka */
+
+footer {
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+    padding: 0.8rem 1.5rem 1.2rem;
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    font-size: 0.9rem;
+}
+
+/*  id a clas  */
+
+/* ukazka ID selektora – uvodna sekcia na hlavnej stranke */
+#uvod {
+    margin-top: 1.5rem;
+}
+
+/* ukazka CLASS selektora – hlavny obrazok v texte */
+.obrazok {
+    max-width: 60%;
+    display: block;
+    margin: 1rem auto;
+}
+
+/* obrazok obtiekany textom */
+.obtekajuci-obrazok {
+    float: right;
+    max-width: 40%;
+    margin: 0 0 1rem 1rem;
+}
+
+/* obrazky + hover efekt */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* obrazky v tabulke - rovnake rozmery */
+table img {
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+table img:hover {
+    transform: scale(1.1);
+}
+
+/* tabulka s obrazkami */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table td,
+table th {
+    padding: 0.8rem;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+}
+
+/* video */
+
+.video-frame {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+iframe {
+    border: none;
+}
+
+/* hlavicka stranky */
+.page-header {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+}
+
+.site-title {
+    margin-left: 10px;
+}
+
+.icon {
+    width: 90px;
+    height: auto;
+}
